@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { StyledEngineProvider } from "@mui/material/styles";
 import routes from "app/configs/routesConfig";
 import Provider from "react-redux/es/components/Provider";
 import AppContext from "./AppContext";
@@ -14,9 +13,7 @@ const withAppProviders = (Component) => (props) => {
         }}
       >
         <Provider store={store}>
-          {/* <StyledEngineProvider injectFirst> */}
-            <Component {...props} />
-          {/* </StyledEngineProvider> */}
+          <Component {...props} />
         </Provider>
       </AppContext.Provider>
     );
